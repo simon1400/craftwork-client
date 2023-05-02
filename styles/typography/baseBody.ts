@@ -13,6 +13,7 @@ export const baseBody = (theme: any) => ({
     fontSize: '20px'
   },
   p: paragraph(theme),
+  
   ul: {
     padding: 0,
     li: {
