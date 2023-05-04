@@ -21,6 +21,13 @@ export const PageTopS = styled.section(({theme}) => `
   }
   svg{
     width: 100%;
+    height: auto;
+    > * {
+      backdrop-filter: blur(10px);
+      background: white;
+      fill: white;
+      opacity: .4;
+    }
   }
   h1{
     position: relative;
