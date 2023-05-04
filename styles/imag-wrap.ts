@@ -1,10 +1,9 @@
 import styled from "@emotion/styled";
 
-export const ImgWrap = styled.div`
+export const ImgWrap = styled.div(({theme}) => `
   position: relative;
   width: 100%;
-  height: 100%;
-  min-height: 430px;
+  padding-top: 75%;
   overflow: hidden;
   img{
     object-fit: cover;
@@ -18,10 +17,10 @@ export const ImgWrap = styled.div`
     height: 200px;
     background: white;
     position: absolute;
-    left: -180px;
+    left: -210px;
     top: -60px;
     z-index: 2;
-    transform: rotate(-60deg);
+    transform: rotate(-70deg);
   }
   &:after {
     content: '';
@@ -30,9 +29,29 @@ export const ImgWrap = styled.div`
     height: 200px;
     background: white;
     position: absolute;
-    right: -180px;
+    right: -210px;
     bottom: -60px;
     z-index: 2;
-    transform: rotate(-60deg);
+    transform: rotate(-70deg);
   }
-`
+  ${theme.breakpoints.down('md')} {
+    &:before {
+      top: -50px;
+      transform: rotate(-75deg);
+    }
+    &:after {
+      bottom: -50px;
+      transform: rotate(-75deg);
+    }
+  }
+  ${theme.breakpoints.down('sm')} {
+    &:before {
+      top: -140px;
+      transform: rotate(-75deg);
+    }
+    &:after {
+      bottom: -140px;
+      transform: rotate(-75deg);
+    }
+  }
+`)

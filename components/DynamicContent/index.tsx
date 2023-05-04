@@ -5,6 +5,7 @@ import ComponentClients from "./Clients"
 import ComponentShortArticles from "./ShortArticles"
 import ComponentBigImage from "./BigImage"
 import ComponentSmall from "./SmallItem"
+import CenterText from "./CenterText"
 
 const DynamicContent: FC<IDynamicContent> = ({data}) => {
   return (
@@ -14,6 +15,7 @@ const DynamicContent: FC<IDynamicContent> = ({data}) => {
       {data.__typename === "ComponentContentClients" && <ComponentClients data={data} />}
       {data.__typename === "ComponentContentBigImage" && <ComponentBigImage image={data.image} />}
       {data.__typename === "ComponentContentCenterContent" && <ComponentSmall items={data.items} />}
+      {data.__typename === "ComponentContentCenterText" && <CenterText content={data.content} />}
     </DynamicContentS>
   )
 }

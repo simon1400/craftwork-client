@@ -13,10 +13,25 @@ export const baseBody2 = (theme: any) => ({
     fontSize: '15px'
   },
   p: paragraph(theme),
+  strong: {
+    color: theme.palette.primary.main,
+  },
   ul: {
     padding: 0,
     li: {
       listStyleType: "none",
+      position: "relative",
+      paddingLeft: "25px",
+      "&:before": {
+        content: "''",
+        display: 'block',
+        width: "15px",
+        height: "1.5px",
+        backgroundColor: theme.palette.primary.main,
+        position: "absolute",
+        left: 0,
+        top: "16px"
+      }
     }
   },
   ol: {
@@ -25,11 +40,14 @@ export const baseBody2 = (theme: any) => ({
     counterReset: 'item',
     li: {
       listStyleType: "none",
-      paddingLeft: "29px",
-      fontSize: '14px',
+      paddingLeft: "25px",
       position: "relative",
+      fontSize: "20px",
       lineHeilght: 1.5,
       counterIncrement: 'item',
+      [theme.breakpoints.down('md')]: {
+        fontSize: '15px'
+      },
       p: {
         marginTop: 0,
         marginBottom: 0,
@@ -38,7 +56,8 @@ export const baseBody2 = (theme: any) => ({
         content: `counter(item)"."`,
         display: "block",
         position: "absolute",
-        fontWeight: 500,
+        color: theme.palette.primary.main,
+        fontWeight: 600,
         left: 0,
       }
     }

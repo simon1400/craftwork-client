@@ -57,6 +57,9 @@ const homepageQuery = gql`
                   content
                 }
               }
+              ... on ComponentContentCenterText{
+                content
+              }
               ... on ComponentContentShortArticle{
                 articles{
                   title

@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 
 export const ArticleS = styled.div(({theme}) => `
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 60px;
+  margin-top: 60px;
   h2{
     margin-bottom: 30px;
   }
@@ -25,7 +25,16 @@ export const ArticleS = styled.div(({theme}) => `
       position: absolute;
       bottom: -5px;
       left: 0;
+      transition: all .2s ease;
     }
+    &:hover{
+      &:after{
+        height: 4px;
+      }
+    }
+  }
+  .content-wrap{
+    padding: 0 60px;
   }
   ${theme.breakpoints.down('md')} {
     margin-bottom: 60px;
@@ -35,8 +44,8 @@ export const ArticleS = styled.div(({theme}) => `
         width: 100%;
       }
     }
-    /* .MuiGrid-container{
-      margin-right: 0;
-    } */
+    .content-wrap{
+      padding: 30px 0px;
+    }
   }
 `)

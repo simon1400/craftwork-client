@@ -2,7 +2,7 @@ import { paragraph } from "./paragraph";
 
 export const baseBody = (theme: any) => ({
   color: theme.palette.text.primary,
-  fontSize: "35px",
+  fontSize: "26px",
   lineHeight: 1.31,
   fontWeight: '300',
   "&::selection": {
@@ -13,7 +13,9 @@ export const baseBody = (theme: any) => ({
     fontSize: '20px'
   },
   p: paragraph(theme),
-  
+  strong: {
+    color: theme.palette.primary.main,
+  },
   ul: {
     padding: 0,
     li: {

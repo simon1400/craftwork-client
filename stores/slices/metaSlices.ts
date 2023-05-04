@@ -32,7 +32,7 @@ const initialState: NavState = {
   ogTitle: "",
   ogDescription: "",
   contentType: "website",
-  themeColor: "#4545ff",
+  themeColor: "#2a82a9",
   siteName: 'Craftwork',
   siteUrl: process.env.NODE_ENV === 'development' ? 'http://localhost:3004' : 'https://craftwork.cz'
 }

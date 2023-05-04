@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const HeaderS = styled.div(({theme}) => `
-  padding: 50px 0;
+  padding: 30px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +35,7 @@ export const MobileNav = styled.div<{open: boolean}>(({open}) => `
   nav{
     width: 100%;
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 25px;
     ul{
       width: 100%;
       li{
@@ -43,9 +43,9 @@ export const MobileNav = styled.div<{open: boolean}>(({open}) => `
         text-align: right;
         margin-right: 0!important;
         margin-left: 0!important;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         a{
-          font-size: 30px;
+          font-size: 18px;
         }
       }
     }

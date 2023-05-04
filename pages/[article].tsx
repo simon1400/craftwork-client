@@ -17,9 +17,15 @@ export const getServerSideProps = wrapper.getServerSideProps(
       }
     });
 
+    if(!data.articles.data.length) {
+      return {
+        notFound: true
+      }
+    }
+
     const article = data.articles.data[0].attributes;
 
-    store.dispatch(changeTitle(article.meta?.title || 'Úvod'))
+    store.dispatch(changeTitle(article.meta?.title || ''))
     store.dispatch(changeDescription(article.meta?.description || ''))
 
     return {

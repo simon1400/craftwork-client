@@ -5,9 +5,24 @@ export const paragraph = (theme: any) => ({
     textDecoration: "none",
     fontWeight: 600,
     transition: "all .2s ease",
-    "&:hover": {
-      color: theme.palette.primary.main,
-      borderBottom: `1.5px solid ${theme.palette.primary.main}`,
-    }
+    "&:after": {
+      content: "''",
+      display: "block",
+      width: "100%",
+      height: "1.5px",
+      background: theme.palette.primary.main,
+      position: "absolute",
+      bottom: "-3px",
+      left: 0,
+      transition: "all .2s ease",
+    },
+    "&:hover":{
+      "&:after": {
+        height: "4px"
+      }
+    },
+    // "&:hover": {
+    //   color: theme.palette.primary.main,
+    // }
   }
 })

@@ -23,6 +23,9 @@ export const FooterS = styled.footer(({theme}) => `
         text-decoration: none;
         font-size: 20px;
         line-height: 30px;
+        ${theme.breakpoints.down('md')} {
+          font-size: 15px;
+        }
       }
     }
   }

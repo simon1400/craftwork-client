@@ -2,7 +2,7 @@ export const base = () => ({
   styleOverrides: {
     html: {
       overflowX: "hidden",
-      WebkitTapHighlightColor: '#000000'
+      WebkitTapHighlightColor: 'transparent'
     },
     body: {
       overflowX: "hidden",
