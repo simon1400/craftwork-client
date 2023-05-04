@@ -1,51 +1,37 @@
 import { Container, Grid, Typography, useMediaQuery } from "@mui/material"
 import { FooterS } from "./styled"
 import Link from "next/link"
-// import Logo from 'public/assets/kersnerova-logo.svg'
-// import Hardart from 'public/assets/hardart.svg'
-// import globalQuery from "queries/global"
-// import { useQuery } from "@apollo/client"
-// import { useRouter } from "next/router"
+import { useQuery } from "@apollo/client"
+import footerQuery from "queries/footer"
 
 const Footer = () => {
 
-  // const router = useRouter()
-
-  // const {data, loading} = useQuery(globalQuery, {
-  //   variables: {locale: router.locale}
-  // })
-
-  // if(loading) {
-  //   return <></>
-  // }
-
+  const {data, loading} = useQuery(footerQuery)
   const mediaMd = useMediaQuery("(max-width: 940px)")
+
+  if(loading) {
+    return <></>
+  }
+
+  console.log(data)
+
+  const footer = data.footer.data.attributes
 
   return (
     <FooterS>
       <Container>
         <Grid container spacing={mediaMd ? 12 : 0}>
           <Grid item xs={12} md={4}>
-            <Typography variant="h3">Craftwork, s.r.o.</Typography>
-            <Typography variant="body2" component="div"><p>Vídeňská 102/113 <br/>Dolní Heršpice<br/>619 00 Brno<br/>IČO 123456789</p></Typography>
+            <Typography variant="h3">{footer.footer1.title}</Typography>
+            <Typography variant="body2" component="div" dangerouslySetInnerHTML={{__html: footer.footer1.content}} />
           </Grid>
           <Grid item xs={12} md={4}>
-            <Typography variant="h3">Craftwork, s.r.o.</Typography>
-            <ul>
-              <li>
-                <Link href="/">O nás</Link>
-              </li>
-              <li>
-                <Link href="/">O nás</Link>
-              </li>
-              <li>
-                <Link href="/">O nás</Link>
-              </li>
-            </ul>
+            <Typography variant="h3">{footer.footer2.title}</Typography>
+            <Typography variant="body2" component="div" dangerouslySetInnerHTML={{__html: footer.footer2.content}} />
           </Grid>
           <Grid item xs={12} md={4}>
-            <Typography variant="h3">Craftwork, s.r.o.</Typography>
-            <Typography variant="body2" component="div"><p>Vídeňská 102/113 <br/>Dolní Heršpice<br/>619 00 Brno<br/>IČO 123456789</p></Typography>
+            <Typography variant="h3">{footer.footer3.title}</Typography>
+            <Typography variant="body2" component="div" dangerouslySetInnerHTML={{__html: footer.footer3.content}} />
           </Grid>
         </Grid>
       </Container>

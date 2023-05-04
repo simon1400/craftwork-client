@@ -26,7 +26,7 @@ export const PageTopS = styled.section(({theme}) => `
       backdrop-filter: blur(10px);
       background: white;
       fill: white;
-      opacity: .4;
+      opacity: .25;
     }
   }
   h1{

@@ -6,6 +6,7 @@ import { useQuery } from "@apollo/client";
 import navTopQuery from "queries/nav";
 import { useEffect, useState } from "react";
 import Hamburger from "hamburger-react";
+import { useRouter } from "next/router";
 
 
 const Header = () => {
@@ -14,12 +15,17 @@ const Header = () => {
 
   const {data, loading} = useQuery(navTopQuery)
   const mediaMd = useMediaQuery("(max-width: 940px)")
+  const router = useRouter()
 
   useEffect(() => {
     if(!loading) {
       setNav(data.navigation.data.attributes.topNav)
     }
   }, [loading])
+
+  useEffect(() => {
+    setOpen(false)
+  }, [router])
 
   const [isOpen, setOpen] = useState(false)
 
