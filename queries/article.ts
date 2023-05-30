@@ -58,6 +58,9 @@ export const getArticle = gql`
                 content
               }
             }
+            ... on ComponentContentCenterText{
+              content
+            }
             ... on ComponentContentShortArticle{
               articles{
                 title

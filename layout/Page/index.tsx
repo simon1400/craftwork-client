@@ -2,7 +2,6 @@ import { FC, ReactNode } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
-import Script from "next/script";
 import { selectAllMeta } from "stores/slices/metaSlices";
 
 interface IPage {

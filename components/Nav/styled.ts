@@ -12,6 +12,13 @@ export const NavS = styled.nav(({theme}) => `
       &:not(:first-of-type) {
         margin-left: 30px;
       }
+      &.active{
+        a{
+          &:after{
+            display: block;
+          }
+        }
+      }
       a{
         text-decoration: none;
         color: ${theme.palette.text.secondary};
@@ -19,6 +26,13 @@ export const NavS = styled.nav(({theme}) => `
         letter-spacing: 2.24px;
         font-weight: 600;
         text-transform: uppercase;
+        &:after{
+          content: '';
+          display: none;
+          width: 100%;
+          height: 1.5px;
+          background: ${theme.palette.primary.main};
+        }
       }
     }
   }

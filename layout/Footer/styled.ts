@@ -13,7 +13,15 @@ export const FooterS = styled.footer(({theme}) => `
     color: rgba(255, 255, 255, .75);
     margin: 0;
     padding: 0;
+    a{
+      color: rgba(255, 255, 255, .75);
+      font-weight: 400;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
   }
+  
   ul{
     margin: 0;
     padding: 0;

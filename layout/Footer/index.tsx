@@ -1,6 +1,5 @@
 import { Container, Grid, Typography, useMediaQuery } from "@mui/material"
 import { FooterS } from "./styled"
-import Link from "next/link"
 import { useQuery } from "@apollo/client"
 import footerQuery from "queries/footer"
 
@@ -12,8 +11,6 @@ const Footer = () => {
   if(loading) {
     return <></>
   }
-
-  console.log(data)
 
   const footer = data.footer.data.attributes
 

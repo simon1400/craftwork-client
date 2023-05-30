@@ -8,6 +8,7 @@ import ComponentSmall from "./SmallItem"
 import CenterText from "./CenterText"
 
 const DynamicContent: FC<IDynamicContent> = ({data}) => {
+  console.log(data)
   return (
     <DynamicContentS>
       {data.__typename === "ComponentContentIcons" && <ComponentIcons icon={data.icon} />}

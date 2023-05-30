@@ -1,7 +1,6 @@
 import type { AppProps } from "next/app";
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import { FC } from 'react';
-// import localFont from 'next/font/local'
 import createEmotionCache from 'lib/createEmotionCache';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { WithGraphQL } from 'lib/api';
@@ -12,36 +11,6 @@ import { wrapper } from "../stores";
 import { Provider } from "react-redux";
 import Header from "layout/Header";
 import Footer from "layout/Footer";
-
-// const DIN2014Demi = localFont({
-//   src: [
-//     {
-//       path: '../public/fonts/DIN_2014_Demi.eot',
-//       weight: 'normal',
-//       style: 'normal',
-//     },
-//     {
-//       path: '../public/fonts/DIN_2014_Demi.otf',
-//       weight: 'normal',
-//       style: 'normal',
-//     },
-//     {
-//       path: '../public/fonts/DIN_2014_Demi.ttf',
-//       weight: 'normal',
-//       style: 'normal',
-//     },
-//     {
-//       path: '../public/fonts/DIN_2014_Demi.woff',
-//       weight: 'normal',
-//       style: 'normal',
-//     },
-//     {
-//       path: '../public/fonts/DIN_2014_Demi.woff2',
-//       weight: 'normal',
-//       style: 'normal',
-//     },
-//   ],
-// })
 
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
