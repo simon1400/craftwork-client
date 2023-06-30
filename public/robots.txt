@@ -1,0 +1,3 @@
+Sitemap: https://craftwork-strapi.hardart.cz/sitemap/index.xml
+User-agent: *
+Allow: /
