@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="51.685" height="43.463" viewBox="0 0 51.685 43.463">
+  <defs>
+    <filter id="envelope-light" x="0" y="0" width="51.685" height="43.463" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#envelope-light)">
+    <path id="envelope-light-2" data-name="envelope-light" d="M4.111,66.055a2.053,2.053,0,0,0-2.055,2.055v2.563l12.563,9.21a3.084,3.084,0,0,0,3.648,0l12.563-9.21V68.111a2.053,2.053,0,0,0-2.055-2.055ZM2.055,73.223v11.33a2.053,2.053,0,0,0,2.055,2.055H28.775a2.053,2.053,0,0,0,2.055-2.055V73.223L19.481,81.541a5.147,5.147,0,0,1-6.076,0ZM0,68.111A4.114,4.114,0,0,1,4.111,64H28.775a4.114,4.114,0,0,1,4.111,4.111V84.553a4.114,4.114,0,0,1-4.111,4.111H4.111A4.114,4.114,0,0,1,0,84.553Z" transform="translate(9.4 -57.6)" fill="#fff" stroke="#2a82a9" stroke-width="0.8"/>
+  </g>
+</svg>

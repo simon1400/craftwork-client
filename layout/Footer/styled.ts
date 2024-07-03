@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 export const FooterS = styled.footer(({theme}) => `
   background: ${theme.palette.primary.main};
   padding: 120px 0;
+  padding-top: 263px;
   text-align: center;
   color: rgba(255, 255, 255, .75);
   h3{
@@ -35,6 +36,31 @@ export const FooterS = styled.footer(({theme}) => `
           font-size: 15px;
         }
       }
+    }
+  }
+`)
+
+export const FooterTopS = styled.div(({theme}) => `
+  padding: 60px 80px;
+  background: #f18700;
+  box-shadow: 0px 3px 6px #00000033;
+  border-radius: 6px;
+  margin-bottom: -90px;
+  z-index: 1000;
+  position: relative;
+  display: flex;
+  gap: 40px;
+  > p{
+    color: white;
+  }
+  .function-btn{
+    min-width: 320px;
+    input{
+      margin-bottom: 10px;
+    }
+    p{
+      color: white;
+      font-size: 13px;
     }
   }
 `)

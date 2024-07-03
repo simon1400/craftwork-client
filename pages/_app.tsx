@@ -11,6 +11,7 @@ import { wrapper } from "../stores";
 import { Provider } from "react-redux";
 import Header from "layout/Header";
 import Footer from "layout/Footer";
+import HeaderTop from "layout/HeaderTop";
 
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
@@ -28,6 +29,7 @@ const MyApp: FC<MyAppProps> = ({ Component, ...rest }) => {
         <ThemeProvider theme={{ ...theme, ...globalVariables }}>
           <CssBaseline />
           <WithGraphQL>
+            <HeaderTop />
             <Header />
             <Component {...pageProps} />
             <Footer />

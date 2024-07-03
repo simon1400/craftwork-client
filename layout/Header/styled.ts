@@ -7,6 +7,7 @@ export const HeaderS = styled.div(({theme}) => `
   align-items: center;
   svg{
     width: 193px;
+    height: 44px;
   }
   .hamburger-react{
     position: relative;

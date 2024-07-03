@@ -6,6 +6,11 @@ const homepageQuery = gql`
       data {
         attributes {
           title
+          smallTitle
+          cta{
+            text
+            link
+          }
           image{
             data{
               attributes{
@@ -56,6 +61,69 @@ const homepageQuery = gql`
                   title
                   content
                 }
+              }
+              ... on ComponentContentSlider{
+                item{
+                  content
+                  image{
+                    data{
+                      attributes{
+                        url
+                      }
+                    }
+                  }
+                }
+              }
+              ... on ComponentContentContactForm{
+                title
+                description
+                phone
+                email
+              }
+              ... on ComponentContentContactBlock{
+                title
+                description
+                cta{
+                  text
+                  link
+                }
+                imagePoint{
+                  data{
+                    attributes{
+                      url
+                    }
+                  }
+                }
+                map
+              }
+              ... on ComponentContentCarousel{
+                item{
+                  title
+                  content
+                  image{
+                    data{
+                      attributes{
+                        url
+                      }
+                    }
+                  }
+                }
+              }
+              ... on ComponentContentSignpost{
+                item{
+                  title
+                  content
+                  image{
+                    data{
+                      attributes{
+                        url
+                      }
+                    }
+                  }
+                }
+              }
+              ... on ComponentContentWisiwig{
+                contentWisiwig
               }
               ... on ComponentContentCenterText{
                 content

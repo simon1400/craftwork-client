@@ -52,6 +52,9 @@ export const getArticle = gql`
                 }
               }
             }
+            ... on ComponentContentWisiwig{
+              contentWisiwig
+            }
             ... on ComponentContentCenterContent{
               items{
                 title

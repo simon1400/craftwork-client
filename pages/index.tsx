@@ -1,6 +1,9 @@
-import { Container, Typography } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
+import Contact from "components/DynamicContent/Contact";
 import DynamicContent from "components/DynamicContent";
 import PageTop from "components/PageTop";
+import SmallItem from "components/DynamicContent/SmallItem";
+import SwitchContent from "components/SwitchContent";
 import Page from "layout/Page";
 import { client } from "lib/api";
 import { NextPage } from "next";
@@ -33,6 +36,8 @@ const Homepage: NextPage<{ homepage: IHomepage }> = ({ homepage }) => {
       <PageTop
         title={homepage.title}
         imageUrl={homepage.image.data.attributes.url}
+        smallTitle={homepage?.smallTitle}
+        cta={homepage?.cta}
       />
       <Container maxWidth="md">
         <Typography

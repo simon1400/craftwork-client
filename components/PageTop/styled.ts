@@ -18,6 +18,9 @@ export const PageTopS = styled.section(({theme}) => `
     height: 540px;
     position: relative;
     z-index: 2;
+    p, div{
+      color: white;
+    }
   }
   svg{
     width: 100%;

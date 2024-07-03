@@ -5,6 +5,9 @@ import { useSelector } from "react-redux";
 import { selectAllMeta } from "stores/slices/metaSlices";
 import Script from "next/script";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 interface IPage {
   children: ReactNode | ReactNode[];
   id?: string;

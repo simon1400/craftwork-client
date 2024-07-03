@@ -5,6 +5,10 @@ interface IDynamicContent {
 interface IButton {
   children: string;
 }
+interface ICta {
+  children: string;
+  onClick: () => void
+}
 
 interface ITopNav {
   title: string;
@@ -25,9 +29,56 @@ interface IImages {
   data: IImageAttributes[]
 }
 
+interface IContactBlock {
+  title: string
+  description: string
+  cta: {
+    text: string
+    link: string
+  }
+  imagePoint: IImage
+  map: string
+}
+
+interface ISmallItem {
+  title: string
+  content: string
+  image: IImage
+}
+
+interface ISmallItemWrap {
+  item: ISmallItem[]
+}
+
 interface IMeta {
   title: string;
   description: string;
+}
+
+interface IContact {
+  title?: string
+  phone?: string;
+  email?: string;
+  content?: string;
+}
+
+interface ISingleCarouselItem {
+  content: string;
+  image: IImage
+}
+
+interface ISingleCarousel {
+  slides: ISingleCarouselItem[]
+}
+
+interface ICarouselItem {
+  title: string;
+  content: string;
+  image: IImage;
+}
+
+interface ICarousel {
+  items: ICarouselItem[]
 }
 
 interface IComponentIcon {
@@ -56,6 +107,11 @@ interface IComponentClients {
 interface IPageTop {
   title: string;
   imageUrl: string;
+  smallTitle?: string;
+  cta?: {
+    text: string;
+    link: string;
+  }
 }
 
 // Components?: [
@@ -68,6 +124,11 @@ interface IPageTop {
 interface IHomepage {
   title: string;
   image: IImage;
+  smallTitle: string;
+  cta: {
+    text: string;
+    link: string;
+  }
   content: string;
   meta: IMeta;
   Components?: any

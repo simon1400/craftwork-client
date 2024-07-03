@@ -1,6 +1,6 @@
 module.exports = {
   apps : [{
-    name   : "Craftwork client",
+    name   : "Craftwork client copy",
     script : "yarn start",
     env_production: {}
   }],
@@ -11,8 +11,8 @@ module.exports = {
       host : ['89.221.216.23'],
       ref  : 'origin/main',
       repo : 'git@github.com:simon1400/craftwork-client.git',
-      path : '/var/www/craftwork/client',
+      path : '/home/dimi/app/craftwork/client-dev',
       'post-deploy' : 'yarn && yarn build && pm2 reload ecosystem.config.js --env production',
-    }
+    },
   }
 };

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 51.72 51.719">
+  <defs>
+    <filter id="phone-light" x="0" y="0" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#phone-light)">
+    <path id="phone-light-2" data-name="phone-light" d="M24.137,17.686a2.568,2.568,0,0,0-3,.732l-2.132,2.608a19.693,19.693,0,0,1-7.136-7.136l2.6-2.126a2.559,2.559,0,0,0,.732-3L12.12,1.571a2.565,2.565,0,0,0-2.9-1.5L2.03,1.61A2.565,2.565,0,0,0,0,4.121H0a28.775,28.775,0,0,0,26.719,28.7c.289.019.584.039.88.051h.006c.392.013.777.026,1.175.026h0a2.565,2.565,0,0,0,2.511-2.03l1.541-7.194a2.565,2.565,0,0,0-1.5-2.9L24.137,17.7ZM28.755,30.84A26.719,26.719,0,0,1,2.055,4.121h0a.509.509,0,0,1,.4-.5L9.654,2.079a.515.515,0,0,1,.578.3l3.083,7.194a.5.5,0,0,1-.148.6L10.559,12.3a2.055,2.055,0,0,0-.475,2.62,21.665,21.665,0,0,0,7.881,7.881,2.055,2.055,0,0,0,2.621-.475l2.132-2.608a.509.509,0,0,1,.6-.148l7.194,3.083a.515.515,0,0,1,.3.578l-1.541,7.194a.514.514,0,0,1-.5.4h-.019Z" transform="translate(9.4 6.42)" fill="#fff" stroke="#2a82a9" stroke-width="0.8"/>
+  </g>
+</svg>
