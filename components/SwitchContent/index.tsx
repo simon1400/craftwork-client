@@ -4,6 +4,8 @@ import Image from "next/image"
 import { FC } from "react"
 import Link from "next/link"
 
+const APP_API = process.env.APP_API
+
 const SwitchContent: FC<{posts: any}> = ({posts}) => {
   return (
     <SwitchContentS>
@@ -14,7 +16,7 @@ const SwitchContent: FC<{posts: any}> = ({posts}) => {
           <Link className={'cta'} href={`/blog/${item.slug}`}>{'ČÍST DÁL'}</Link>
         </div>
         <div className="switch-img">
-          <Image src="/img/article.webp" fill alt="slider" />
+          <Image src={APP_API+item.image.data.attributes.url} fill alt="slider" />
         </div>
       </div>)}
     </SwitchContentS>

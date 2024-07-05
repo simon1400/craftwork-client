@@ -52,6 +52,10 @@ export const FooterTopS = styled.div(({theme}) => `
   gap: 40px;
   > p{
     color: white;
+    width: 100%;
+    a{
+      color: white;
+    }
   }
   .function-btn{
     min-width: 320px;
@@ -61,6 +65,9 @@ export const FooterTopS = styled.div(({theme}) => `
     p{
       color: white;
       font-size: 13px;
+      a{
+        color: white;
+      }
     }
   }
 `)

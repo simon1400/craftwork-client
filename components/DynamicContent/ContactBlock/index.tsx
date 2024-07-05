@@ -4,6 +4,8 @@ import { FC } from "react"
 import Image from "next/image"
 import Link from "next/link"
 
+const APP_API = process.env.APP_API
+
 const ContactBlock: FC<IContactBlock> = ({
   title, map, description, cta, imagePoint
 }) => {
@@ -16,14 +18,14 @@ const ContactBlock: FC<IContactBlock> = ({
               <div>
                 <Typography variant="h2">{title}</Typography>
                 <Typography variant="body2" component={'div'} dangerouslySetInnerHTML={{__html: description}} />
-                <Link className={'cta'} href={cta.link}>{cta.text}</Link>
+                {cta && <Link className={'cta'} href={cta.link}>{cta.text}</Link>}
               </div>
             </div>
           </Grid>
           <Grid item xs={4}>
-            <div className="item-img">
-              <Image src="/img/article.webp" fill alt="slider" />
-            </div>
+            {imagePoint && <div className="item-img">
+              <Image src={APP_API+imagePoint.data.attributes.url} fill alt="slider" />
+            </div>}
           </Grid>
           <Grid item xs={4}>
             <div className="item-map">

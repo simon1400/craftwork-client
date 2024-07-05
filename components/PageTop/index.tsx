@@ -15,6 +15,7 @@ const PageTop: FC<IPageTop> = ({
 }) => {
 
   const router = useRouter()
+  console.log(imageUrl)
   return (
     <PageTopS>
       <Image src={APP_API+imageUrl} fill alt={title}/>

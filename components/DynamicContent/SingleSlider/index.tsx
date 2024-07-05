@@ -46,6 +46,9 @@ const settings = {
 
 
 const SingleCarousel: FC<ISingleCarousel> = ({slides}) => {
+  if(!slides?.length) {
+    return null
+  }
   return (
     <Container>
       <SingleCarouselWrap className="slider-container">    

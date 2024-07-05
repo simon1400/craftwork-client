@@ -53,6 +53,7 @@ export const ContentSliderS = styled.div(({theme}) => `
   }
   .content{
     padding: 45px;
+    width: 100%;
     * {
       font-size: 18px;
       color: white;
@@ -63,5 +64,8 @@ export const ContentSliderS = styled.div(({theme}) => `
     position: relative;
     overflow: hidden;
     min-width: 40%;
+    img{
+      object-fit: cover;
+    }
   }
 `)

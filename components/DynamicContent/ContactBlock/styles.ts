@@ -39,6 +39,9 @@ export const ContactBlockS = styled.div(({theme}) => `
     padding-top: 100%;
     overflow: hidden;
     width: 100%;
+    img{
+      object-fit: cover;
+    }
   }
   .item-map{
     iframe{

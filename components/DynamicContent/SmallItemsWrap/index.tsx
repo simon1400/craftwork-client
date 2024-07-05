@@ -3,6 +3,11 @@ import { FC } from "react"
 import SmallItem from "../SmallBlockItem"
 
 const SmallItemWrap: FC<ISmallItemWrap> = ({item}) => {
+
+  if(!item?.length) {
+    return null
+  }
+
   return (
     <Container maxWidth="lg">
         <Grid container spacing={6} marginBottom={18} justifyContent="center">

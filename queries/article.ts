@@ -24,7 +24,7 @@ export const getArticle = gql`
               icon{
                 title
                 icon{
-									data{
+                  data{
                     attributes{
                       url
                     }
@@ -52,17 +52,77 @@ export const getArticle = gql`
                 }
               }
             }
-            ... on ComponentContentWisiwig{
-              contentWisiwig
-            }
             ... on ComponentContentCenterContent{
               items{
                 title
                 content
               }
             }
+            ... on ComponentContentSlider{
+              item{
+                content
+                image{
+                  data{
+                    attributes{
+                      url
+                    }
+                  }
+                }
+              }
+            }
+            ... on ComponentContentContactForm{
+              title
+              description
+              phone
+              email
+            }
+            ... on ComponentContentContactBlock{
+              title
+              description
+              cta{
+                text
+                link
+              }
+              imagePoint{
+                data{
+                  attributes{
+                    url
+                  }
+                }
+              }
+              map
+            }
+            ... on ComponentContentCarousel{
+              item{
+                title
+                content
+                image{
+                  data{
+                    attributes{
+                      url
+                    }
+                  }
+                }
+              }
+            }
+            ... on ComponentContentSignpost{
+              item{
+                title
+                content
+                image{
+                  data{
+                    attributes{
+                      url
+                    }
+                  }
+                }
+              }
+            }
             ... on ComponentContentCenterText{
               content
+            }
+            ... on ComponentContentWisiwig{
+              contentWisiwig
             }
             ... on ComponentContentShortArticle{
               articles{

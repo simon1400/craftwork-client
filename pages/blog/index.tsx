@@ -20,9 +20,6 @@ export const getServerSideProps = wrapper.getServerSideProps(
 
     const blog = data.blogPage.data.attributes;
     const posts = dataPosts.posts.data.map((item: any) => item.attributes)
-    // const posts = []
-
-    console.log(dataPosts)
 
     store.dispatch(changeTitle(blog.meta?.title || 'Blog'))
     store.dispatch(changeDescription(blog.meta?.description || ''))
@@ -40,7 +37,6 @@ const Blog: NextPage<{blog: any, posts: any}> = ({
   blog,
   posts
 }) => {
-  console.log(posts)
   return (
     <Page>
       <PageTop 

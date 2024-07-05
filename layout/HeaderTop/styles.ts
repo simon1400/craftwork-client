@@ -13,6 +13,9 @@ export const HeaderTopS = styled.div(({theme}) => `
         margin: 0;
         font-size: 15px;
       }
+      a{
+        color: white;
+      }
     }
   }
 `)

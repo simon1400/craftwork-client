@@ -15,7 +15,7 @@ const nextConfig = {
     return config
   },
   images: {
-    domains: ['craftwork-strapi.hardart.cz', 'localhost'],
+    domains: ['craftwork-strapi.hardart.cz', 'craftwork-strapi-copy.hardart.cz', 'localhost'],
   },
 }
 
