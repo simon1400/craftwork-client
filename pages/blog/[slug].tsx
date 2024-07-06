@@ -38,7 +38,11 @@ export const getServerSideProps = wrapper.getServerSideProps(
 const Post: NextPage<{post: any}> = ({post}) => {
   return (
     <Page>
-      <PageTop title={post.title} imageUrl={post.image.data.attributes.url} />
+      <PageTop 
+        title={post.title} 
+        imageUrl={post.image.data.attributes.url}
+        content={post.content}
+      />
       {post.components.map((item: any, idx: number) => <DynamicContent key={idx} data={item} />)}
     </Page>
   )

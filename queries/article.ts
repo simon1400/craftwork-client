@@ -8,6 +8,11 @@ export const getArticle = gql`
           title
           slug
           content
+          smallTitile
+          cta{
+            text
+            link
+          }
           meta{
             title
             description

@@ -11,24 +11,26 @@ const PageTop: FC<IPageTop> = ({
   title,
   imageUrl,
   smallTitle,
+  content,
   cta
 }) => {
 
   const router = useRouter()
-  console.log(imageUrl)
+
   return (
     <PageTopS>
       <Image src={APP_API+imageUrl} fill alt={title}/>
       <Container maxWidth="xxl">
         <div className="m-head">
+          {smallTitle && <Typography variant="h2">{smallTitle}</Typography>}
           <Typography variant="h1">{title}</Typography>
-          {smallTitle && <Typography
+          {content && <Typography
             textAlign="center"
             variant={'body2'}
             component="div"
-            marginTop={8}
-            marginBottom={8}
-            dangerouslySetInnerHTML={{ __html: smallTitle }}
+            marginTop={6}
+            marginBottom={6}
+            dangerouslySetInnerHTML={{ __html: content }}
           />}
           {cta && <Cta onClick={() => router.push(cta.link)}>{cta.text}</Cta>}
         </div>

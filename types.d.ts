@@ -108,6 +108,7 @@ interface IPageTop {
   title: string;
   imageUrl: string;
   smallTitle?: string;
+  content?: string; 
   cta?: {
     text: string;
     link: string;
@@ -154,6 +155,11 @@ interface IComponentSmallItem {
 
 interface IArticlePage {
   title: string;
+  smallTitile: string;
+  cta: {
+    text: string;
+    link: string;
+  }
   content: string;
   meta: IMeta;
   image: IImage;

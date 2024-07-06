@@ -13,7 +13,7 @@ const ContactBlock: FC<IContactBlock> = ({
     <ContactBlockS>
       <Container>
         <Grid container spacing={12}>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={4}>
             <div className="item-content">
               <div>
                 <Typography variant="h2">{title}</Typography>
@@ -22,12 +22,12 @@ const ContactBlock: FC<IContactBlock> = ({
               </div>
             </div>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={4}>
             {imagePoint && <div className="item-img">
               <Image src={APP_API+imagePoint.data.attributes.url} fill alt="slider" />
             </div>}
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={4}>
             <div className="item-map">
               <iframe src={map} style={{border:"0"}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>

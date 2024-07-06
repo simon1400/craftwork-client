@@ -39,16 +39,13 @@ export const getServerSideProps = wrapper.getServerSideProps(
 const Article: NextPage<{article: IArticlePage}> = ({article}) => {
   return (
     <Page>
-      <PageTop title={article.title} imageUrl={article.image.data.attributes.url} />
-      <Container maxWidth="md">
-        <Typography
-          textAlign="center"
-          component="div"
-          marginTop={12}
-          marginBottom={12}
-          dangerouslySetInnerHTML={{ __html: article.content }}
-        />
-      </Container>
+      <PageTop 
+        title={article.title} 
+        imageUrl={article.image.data.attributes.url}
+        smallTitle={article.smallTitile}
+        content={article.content}
+        cta={article.cta}
+      />
       {article.components.map((item: any, idx: number) => <DynamicContent key={idx} data={item} />)}
     </Page>
   )

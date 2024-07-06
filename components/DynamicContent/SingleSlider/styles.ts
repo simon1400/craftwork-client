@@ -16,6 +16,10 @@ export const SingleCarouselWrap = styled.div(({theme}) => `
     &:before, &:after{
       content: '';
     }
+    &.slick-disabled{
+      opacity: .3;
+      cursor: default;
+    }
     svg{
       width: 16px;
       height: 14px;
@@ -50,22 +54,33 @@ export const ContentSliderS = styled.div(({theme}) => `
     overflow: hidden;
     position: relative;
     border-radius: 6px;
-  }
-  .content{
-    padding: 45px;
-    width: 100%;
-    * {
-      font-size: 18px;
-      color: white;
+    .content{
+      padding: 45px;
+      width: 100%;
+      * {
+        font-size: 18px;
+        color: white;
+      }
+    }
+    .img{
+      clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+      position: relative;
+      overflow: hidden;
+      min-width: 40%;
+      img{
+        object-fit: cover;
+      }
     }
   }
-  .img{
-    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
-    position: relative;
-    overflow: hidden;
-    min-width: 40%;
-    img{
-      object-fit: cover;
+  ${theme.breakpoints.down('md')} {
+    padding: 0 50px;
+    .wrap{
+      flex-direction: column;
+      .img{
+        clip-path: none;
+        width: 100%;
+        height: 200px;
+      }
     }
   }
 `)

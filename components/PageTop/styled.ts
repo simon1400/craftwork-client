@@ -4,6 +4,7 @@ export const PageTopS = styled.section(({theme}) => `
   overflow: hidden;
   position: relative;
   background-color: ${theme.palette.text.secondary};
+  margin-bottom: 60px;
   > img {
     object-fit: cover;
     object-position: center;
@@ -35,7 +36,12 @@ export const PageTopS = styled.section(({theme}) => `
   h1{
     position: relative;
     color: white;
-    /* margin-top: -65px; */
+  }
+  h2{
+    font-size: 35px;
+    color: white;
+    font-weight: lighter;
+    margin-bottom: 20px;
   }
   ${theme.breakpoints.down('md')} {
     .m-head{

@@ -16,6 +16,10 @@ export const CarouselWrap = styled.div(({theme}) => `
     &:before, &:after{
       content: '';
     }
+    &.slick-disabled{
+      opacity: .3;
+      cursor: default;
+    }
     svg{
       width: 16px;
       height: 14px;

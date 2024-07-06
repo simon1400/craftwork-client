@@ -17,5 +17,6 @@ export const MailButtonS = styled.div(({theme}) => `
     height: 35px;
     width: 80px;
     font-weight: bold;
+    font-family: ${theme.typography.fontFamily};
   }
 `)

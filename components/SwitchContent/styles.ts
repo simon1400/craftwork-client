@@ -43,9 +43,12 @@ export const SwitchContentS = styled.div(({theme}) => `
       position: relative;
       z-index: 100;
       padding: 40px;
-      h2{
-        margin-bottom: 30px;
-      }
+      a{
+        text-decoration: none;
+        h2{
+          margin-bottom: 30px;
+        }
+      } 
       .cta{
         display: inline-block;
         color: ${theme.palette.primary.main};

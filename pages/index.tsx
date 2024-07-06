@@ -36,18 +36,10 @@ const Homepage: NextPage<{ homepage: IHomepage }> = ({ homepage }) => {
       <PageTop
         title={homepage.title}
         imageUrl={homepage.image.data.attributes.url}
+        content={homepage.content}
         smallTitle={homepage?.smallTitle}
         cta={homepage?.cta}
       />
-      <Container maxWidth="md">
-        <Typography
-          textAlign="center"
-          component="div"
-          marginTop={12}
-          marginBottom={12}
-          dangerouslySetInnerHTML={{ __html: homepage.content }}
-        />
-      </Container>
       {homepage.Components.map((item: any, idx: number) => <DynamicContent key={idx} data={item} />)}
     </Page>
   );

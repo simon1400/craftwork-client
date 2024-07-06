@@ -11,12 +11,12 @@ const SwitchContent: FC<{posts: any}> = ({posts}) => {
     <SwitchContentS>
       {!!posts.length && posts.map((item: any, idx: number) => <div key={idx} className={'switch-item'}>
         <div className="switch-content">
-          <Typography variant="h2">{item.title}</Typography>
+          <Link href={`/blog/${item.slug}`}><Typography variant="h2">{item.title}</Typography></Link>
           <Typography variant="body2" component={'div'} dangerouslySetInnerHTML={{__html: item.content}} />
           <Link className={'cta'} href={`/blog/${item.slug}`}>{'ČÍST DÁL'}</Link>
         </div>
         <div className="switch-img">
-          <Image src={APP_API+item.image.data.attributes.url} fill alt="slider" />
+          <Link href={`/blog/${item.slug}`}><Image src={APP_API+item.image.data.attributes.url} fill alt="slider" /></Link>
         </div>
       </div>)}
     </SwitchContentS>

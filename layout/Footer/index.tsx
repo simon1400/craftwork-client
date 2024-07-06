@@ -4,6 +4,7 @@ import { useQuery } from "@apollo/client"
 import footerQuery from "queries/footer"
 import MailButton from "components/MailButton"
 import globalQuery from "queries/global"
+import ContactIcons from "./ContactIcons"
 
 const Footer = () => {
 
@@ -43,6 +44,7 @@ const Footer = () => {
             <Grid item xs={12} md={4}>
               <Typography variant="h3">{footer.footer3.title}</Typography>
               <Typography variant="body2" component="div" dangerouslySetInnerHTML={{__html: footer.footer3.content}} />
+              <ContactIcons data={global.iconsLink} />
             </Grid>
           </Grid>
         </Container>

@@ -39,4 +39,13 @@ export const ContactS = styled.div(({theme}) => `
       width: 100%;
     }
   }
+  ${theme.breakpoints.down('md')} {
+    flex-direction: column;
+    .contact-form{
+      padding: 60px 60px;
+      &:before{
+        width: 100%;
+      }
+    }
+  }
 `)

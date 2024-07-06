@@ -70,4 +70,32 @@ export const FooterTopS = styled.div(({theme}) => `
       }
     }
   }
+  ${theme.breakpoints.down('md')} {
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+    .function-btn{
+      min-width: 20px;
+      width: 100%;
+    }
+  }
+`)
+
+export const ContactIconsS = styled.div(({theme}) => `
+  ul{
+    padding-top: 30px;
+    li{
+      display: inline-block;
+      &:not(:first-of-type) {
+        margin-left: 10px;
+      }
+      &:not(:last-of-type) {
+        margin-right: 10px;
+      }
+      a{
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
 `)

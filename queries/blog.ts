@@ -51,6 +51,7 @@ export const getPost = gql`
       data {
         attributes {
           title
+          content
           image{
             data{
               attributes{

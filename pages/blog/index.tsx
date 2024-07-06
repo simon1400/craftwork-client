@@ -42,7 +42,7 @@ const Blog: NextPage<{blog: any, posts: any}> = ({
       <PageTop 
         title={blog.title} 
         imageUrl={blog.image.data.attributes.url} 
-        smallTitle={blog?.description}
+        content={blog?.description}
       />
       {posts && <Container>
         <SwitchContent posts={posts} />
