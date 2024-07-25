@@ -1,5 +1,6 @@
 import { Box, Container, Grid, Typography, useMediaQuery } from "@mui/material"
 import Image from "next/image"
+import Link from "next/link"
 import { FC } from "react"
 
 const APP_API = process.env.APP_API
@@ -17,6 +18,7 @@ const ComponentClients: FC<{data: IComponentClients}> = ({data}) => {
             <Image style={{height: 'auto'}} src={APP_API+item.attributes.url} width={mediaSm ? "150" : "200"} height="100" alt="" />
           </Grid>)}
         </Grid>
+        <div style={{textAlign: 'center'}}><Link className="more" href={data.cta.link}>{data.cta.text}</Link></div>
       </Box>
     </Container>
   )

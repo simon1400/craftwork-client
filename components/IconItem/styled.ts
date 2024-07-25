@@ -7,7 +7,7 @@ export const IconItemS = styled.div(({theme}) => `
     margin-bottom: 15px;
     display: inline-block;
   }
-  h2{
+  h3{
     margin-bottom: 15px;
     display: block;
   }

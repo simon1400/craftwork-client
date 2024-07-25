@@ -17,7 +17,11 @@ export const SmallItemS = styled.div(({theme}) => `
   .image-wrap{
     position: relative;
     width: 50%;
+    display: block;
     min-width: 50%;
-    object-fit: contain;
+    margin-left: 10px;
+    img{
+      height: auto!important;
+    }
   }
 `)

@@ -102,6 +102,7 @@ interface IComponentArticles {
 interface IComponentClients {
   title: string;
   images: IImages;
+  cta: ILink;
 }
 
 interface IPageTop {

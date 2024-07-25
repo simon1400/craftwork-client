@@ -20,7 +20,7 @@ const PageTop: FC<IPageTop> = ({
   return (
     <PageTopS>
       <Image src={APP_API+imageUrl} fill alt={title}/>
-      <Container maxWidth="xxl">
+      <Container maxWidth="md">
         <div className="m-head">
           {smallTitle && <Typography variant="h2">{smallTitle}</Typography>}
           <Typography variant="h1">{title}</Typography>
@@ -30,6 +30,8 @@ const PageTop: FC<IPageTop> = ({
             component="div"
             marginTop={6}
             marginBottom={6}
+            paddingRight={8}
+            paddingLeft={8}
             dangerouslySetInnerHTML={{ __html: content }}
           />}
           {cta && <Cta onClick={() => router.push(cta.link)}>{cta.text}</Cta>}

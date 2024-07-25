@@ -46,6 +46,10 @@ const homepageQuery = gql`
                     }
                   }
                 }
+                cta{
+                  text
+                  link
+                }
               }
               ... on ComponentContentBigImage{
                 image{

@@ -16,7 +16,7 @@ export const PageTopS = styled.section(({theme}) => `
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 540px;
+    height: 720px;
     position: relative;
     z-index: 2;
     p, div{

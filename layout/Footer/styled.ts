@@ -65,6 +65,8 @@ export const FooterTopS = styled.div(({theme}) => `
     p{
       color: white;
       font-size: 13px;
+      margin-top: 0;
+      margin-bottom: 0;
       a{
         color: white;
       }
