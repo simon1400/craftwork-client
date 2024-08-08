@@ -44,6 +44,7 @@ interface ISmallItem {
   title: string
   content: string
   image: IImage
+  url?: string;
 }
 
 interface ISmallItemWrap {

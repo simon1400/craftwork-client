@@ -18,7 +18,7 @@ const ComponentClients: FC<{data: IComponentClients}> = ({data}) => {
             <Image style={{height: 'auto'}} src={APP_API+item.attributes.url} width={mediaSm ? "150" : "200"} height="100" alt="" />
           </Grid>)}
         </Grid>
-        <div style={{textAlign: 'center'}}><Link className="more" href={data.cta.link}>{data.cta.text}</Link></div>
+        {data.cta?.link && <div style={{textAlign: 'center'}}><Link className="more" href={data.cta.link}>{data.cta.text}</Link></div>}
       </Box>
     </Container>
   )

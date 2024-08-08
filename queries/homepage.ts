@@ -117,6 +117,7 @@ const homepageQuery = gql`
                 item{
                   title
                   content
+                  url
                   image{
                     data{
                       attributes{

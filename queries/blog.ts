@@ -153,6 +153,7 @@ export const getPost = gql`
               item{
                 title
                 content
+                url
                 image{
                   data{
                     attributes{

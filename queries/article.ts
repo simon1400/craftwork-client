@@ -114,6 +114,7 @@ export const getArticle = gql`
               item{
                 title
                 content
+                url
                 image{
                   data{
                     attributes{
