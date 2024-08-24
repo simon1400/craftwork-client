@@ -7,7 +7,7 @@ const APP_API = process.env.APP_API
 
 const ComponentBigImage: FC<{image: IImage}> = ({image}) => {
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="xl">
       <BigImage>
         <Image src={APP_API+image.data.attributes.url} fill alt="" />
       </BigImage>

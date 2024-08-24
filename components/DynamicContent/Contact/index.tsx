@@ -5,7 +5,7 @@ import Cta from "components/cta"
 import { FC, useState } from "react"
 import { Container, Typography } from "@mui/material"
 
-const Contact: FC<IContact> = ({title, phone, email, content}) => {
+const Contact: FC<IContact> = ({title, phone, email, description}) => {
 
   const [state, setState] = useState({
     name: '',
@@ -22,13 +22,15 @@ const Contact: FC<IContact> = ({title, phone, email, content}) => {
 
   }
 
+  console.log(description)
+
   return (
     <Container>
       <Typography variant="h2" marginBottom={12} textAlign="center">{title}</Typography>
       <ContactS>
         <div className={'contact-info'}>
           <div>
-            {content && <Typography variant={'body2'} component={'div'} dangerouslySetInnerHTML={{__html: content}} />}
+            {description && <Typography variant={'body2'} component={'div'} dangerouslySetInnerHTML={{__html: description}} />}
             {phone && <ContactLine data={phone} type={'phone'} />}
             {email && <ContactLine data={email} type={'email'} />}
           </div>

@@ -50,7 +50,6 @@ const Carousel: FC<ICarousel> = ({items}) => {
     //   }
     // ]
   };
-  
 
   return (
     <Container>
@@ -58,7 +57,7 @@ const Carousel: FC<ICarousel> = ({items}) => {
         <Slider {...settings}>
           {items.map((item: ICarouselItem, idx: number) => <div key={idx} className="slider-item-c">
             <div className={'image-wrap'}>
-              <Image src={APP_API+item.image.data.attributes.url} fill alt="slider" />
+              {item.image.data && <Image src={APP_API+item.image.data.attributes.url} fill alt="slider" />}
             </div>
             <Typography variant="h3">{item.title}</Typography>
             <Typography variant="body2" component={'div'} dangerouslySetInnerHTML={{__html: item.content}}/>

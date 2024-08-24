@@ -60,7 +60,7 @@ interface IContact {
   title?: string
   phone?: string;
   email?: string;
-  content?: string;
+  description?: string;
 }
 
 interface ISingleCarouselItem {

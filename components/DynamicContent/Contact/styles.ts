@@ -16,6 +16,9 @@ export const ContactS = styled.div(({theme}) => `
     > *{
       margin: auto;
     }
+    * {
+      color: white;
+    }
   }
   .contact-form{
     width: 100%;

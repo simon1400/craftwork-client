@@ -7,7 +7,7 @@ export const PageTopS = styled.section(({theme}) => `
   margin-bottom: 60px;
   > img {
     object-fit: cover;
-    object-position: center;
+    object-position: center center;
     opacity: .6;
     z-index: 1;
   }
@@ -36,6 +36,7 @@ export const PageTopS = styled.section(({theme}) => `
   h1{
     position: relative;
     color: white;
+    text-align: center;
   }
   h2{
     font-size: 35px;

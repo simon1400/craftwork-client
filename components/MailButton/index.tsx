@@ -7,10 +7,10 @@ const MailButton = () => {
       <Input 
         name="email"
         onChange={() => console.log('name')}
-        value="some"
+        value=""
         type="email"
         field="input"
-        placeholder="váš e-mail"
+        placeholder="Zadejte e-mail"
       />
       <button>{'ODESLAT'}</button>
     </MailButtonS>
