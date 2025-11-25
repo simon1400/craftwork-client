@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="74.276" height="82.029" viewBox="0 0 74.276 82.029">
+    <defs>
+        <filter id="hlhqipqr4a" x="0" y="0" width="74.276" height="82.029" filterUnits="userSpaceOnUse">
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feFlood flood-opacity=".122"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g style="filter:url(#hlhqipqr4a)">
+        <path data-name="calendar-star-light" d="M15.507 7.754h23.261V1.938a1.938 1.938 0 0 1 3.877 0v5.816h3.877a7.757 7.757 0 0 1 7.754 7.754v38.768a7.761 7.761 0 0 1-7.754 7.754H7.754A7.757 7.757 0 0 1 0 54.276V15.507a7.753 7.753 0 0 1 7.754-7.753h3.877V1.938a1.938 1.938 0 0 1 3.877 0zM3.877 54.276a3.875 3.875 0 0 0 3.877 3.877h38.768a3.873 3.873 0 0 0 3.878-3.877V23.261H3.877zm0-38.768v3.877H50.4v-3.878a3.873 3.873 0 0 0-3.877-3.877H7.754a3.875 3.875 0 0 0-3.877 3.877z" transform="translate(10 6)" style="fill:#2a82a9;stroke:#fff;stroke-linejoin:round;stroke-width:2px"/>
+    </g>
+</svg>
